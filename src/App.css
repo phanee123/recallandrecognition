@@ -1,0 +1,9 @@
+.main-container {
+  background-color: white;
+  width: 93vw;
+  min-height: 90vh;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
