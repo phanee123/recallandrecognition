@@ -57,4 +57,12 @@ const shuffleArray = (array) => {
   }
   return data;
 };
-export { TEST1_WORDS, TEST2_WORDS, shuffleArray };
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+}
+
+const NUMBER_OF_SECONDS = 10;
+export { TEST1_WORDS, TEST2_WORDS, shuffleArray, NUMBER_OF_SECONDS, getRandomInt };

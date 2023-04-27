@@ -4,11 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { TEST1_WORDS, TEST2_WORDS, shuffleArray } from "../constants/general";
 const Ready = () => {
   const navigate = useNavigate();
-  const { setSystemInput } = useContext(ResultsContext);
+  const { currentTest, setSystemInput } = useContext(ResultsContext);
 
   useEffect(() => {
     setTimeout(() => {
-      setSystemInput(shuffleArray(TEST1_WORDS));
+      if (currentTest) {
+        setSystemInput(shuffleArray(TEST2_WORDS));
+      } else {
+        setSystemInput(shuffleArray(TEST1_WORDS));
+      }
       navigate("/wordsgrid");
     }, 2500);
   }, []);

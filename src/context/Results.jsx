@@ -12,7 +12,7 @@ export const ResultsContext = createContext({
 export const ResultsProvider = ({ children }) => {
   const [systemInput, setSystemInput] = useState([]);
   const [userInput, setUserInput] = useState([]);
-  const [currentTest, setCurrentTest] = useState(1);
+  const [currentTest, setCurrentTest] = useState(0);
 
   const value = {
     systemInput,
@@ -22,7 +22,5 @@ export const ResultsProvider = ({ children }) => {
     currentTest,
     setCurrentTest,
   };
-  return (
-    <ResultsContext.Provider value={value}>{children}</ResultsContext.Provider>
-  );
+  return <ResultsContext.Provider value={value}>{children}</ResultsContext.Provider>;
 };

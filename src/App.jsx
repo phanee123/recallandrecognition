@@ -7,6 +7,7 @@ import PageNotFound from "./page/PageNotFound";
 import "./App.css";
 import Ready from "./page/Ready";
 import WordsGrid from "./page/wordsgrid";
+import Intervention from "./page/intervention";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <ResultsProvider>
           <Routes>
             <Route path="/" element={<Instructions />} />
-            {/* <Route path="/interventiontask" element={<IntTask />} /> */}
+            <Route path="/intervention" element={<Intervention />} />
             <Route path="/ready" element={<Ready />} />
             <Route path="/wordsgrid" element={<WordsGrid />} />
             <Route path="/exitWithExcel" element={<ExitWithDownloadExcel />} />

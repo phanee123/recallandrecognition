@@ -1,33 +1,28 @@
-import { CSVDownload, CSVLink } from "react-csv";
+import { CSVLink } from "react-csv";
 import { useContext } from "react";
 import { ResultsContext } from "../context/Results";
+import { TEST1_WORDS } from "../constants/general";
 
-//   TODO: fix headers
 const headers = [
-  { label: "Test Number", key: "currentTest" },
-  { label: "SL Number in Current Test", key: "serialNum" },
-  { label: "System Input", key: "systemInput" },
+  { label: "Result Words", key: "actualWords" },
+  { label: "Test Words", key: "systemInput" },
   { label: "User Input", key: "userInput" },
-  { label: "Input Status", key: "isTrue" },
-  { label: "Time Response (in se)", key: "timeTookInSec" },
+  // { label: "Recognition", key: "test" },
 ];
 
 const ExitWithDownloadExcel = () => {
-  const { results } = useContext(ResultsContext);
+  const { systemInput, userInput } = useContext(ResultsContext);
 
   const csvReport = {
-    data: results,
+    data: [{ actualWords: TEST1_WORDS, systemInput, userInput, isTrue: getResult() }],
     headers: headers,
-    filename: `StroopEffect_${new Date().toLocaleString()}`,
+    filename: `Recall&Recognistion${new Date().toLocaleString()}`,
     extension: ".csv",
   };
-
-  //   TODO: Add correct message below
+  const getResult = () => {};
   return (
     <div>
-      <h3>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, iure.
-      </h3>
+      <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, iure.</h3>
       <CSVLink {...csvReport}>Download me</CSVLink>;
     </div>
   );

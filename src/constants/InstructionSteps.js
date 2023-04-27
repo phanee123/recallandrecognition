@@ -38,35 +38,25 @@ const INSTRUCTION_STEPS_TEST1 = [
 const INSTRUCTION_STEPS_TEST2 = [
   {
     stepIndex: 1,
-    content: `<p1>
+    content: `<p>
     Please take your record note book and write down the words you have seen 
     on the screen. Try to write as many words as possible.
-    </p1>
-    <p1>
-    Please take your record note book and write down the words you have seen 
-    on the screen. Try to write as many words as possible.
-    </p1>`,
+    </p>`,
     buttonLabel2: "Next",
   },
-];
-
-const INSTRUCTION_STEPS_TEST3 = [
   {
-    stepIndex: 1,
-    content: `<p1>
+    stepIndex: 2,
+    content: `<p>
     In the following page you will see words twice as many as the words you have
     seen previously on the screen. All you have to do is identify the words you
     have seen before and click on them.
-    </p1>
-    <p1>
+    </p>
+    <p>
     Please give your responses as fast as possible.
-    </p1>`,
-    buttonLabel2: "Next",
+    </p>`,
+    buttonLabel1: "Back",
+    buttonLabel2: "End Instructions",
   },
 ];
 
-export {
-  INSTRUCTION_STEPS_TEST1,
-  INSTRUCTION_STEPS_TEST2,
-  INSTRUCTION_STEPS_TEST3,
-};
+export { INSTRUCTION_STEPS_TEST1, INSTRUCTION_STEPS_TEST2 };
