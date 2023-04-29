@@ -65,6 +65,6 @@ function getRandomInt(min, max) {
 }
 
 // #TODO:
-const NUMBER_OF_SECONDS = 60;
+const NUMBER_OF_SECONDS = 1;
 const NUM_QUESTIONS_INTERVENTION = 15;
 export { TEST1_WORDS, TEST2_WORDS, shuffleArray, NUMBER_OF_SECONDS, getRandomInt, NUM_QUESTIONS_INTERVENTION };

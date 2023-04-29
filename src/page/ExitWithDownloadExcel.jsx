@@ -13,8 +13,9 @@ const ExitWithDownloadExcel = () => {
   const { systemInput, userInput, test1Score } = useContext(ResultsContext);
 
   const getTest2Score = () => {
-    const trueNum = TEST1_WORDS.filter((word) => userInput.includes(word)).length;
-    return (TEST1_WORDS.length - trueNum) * (100 % systemInput.length);
+    const trueNum = TEST1_WORDS.filter((word) => userInput.includes(word));
+    console.log(trueNum);
+    return (TEST1_WORDS.length - trueNum.length) * (100 % systemInput.length);
   };
 
   const csvReport = {
@@ -26,7 +27,7 @@ const ExitWithDownloadExcel = () => {
   return (
     <div>
       <h2>Results:</h2>
-      <h3>Score Test 1 :{test1Score * 0.6666666}</h3>
+      <h3>Score Test 1 :{(test1Score / TEST1_WORDS.length) * 100}</h3>
       <h3>Score Test 2 :{getTest2Score()}</h3>
       <h3>Please click the below link to download the results</h3>
       <CSVLink {...csvReport}>Download me</CSVLink>;
