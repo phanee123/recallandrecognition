@@ -1,15 +1,20 @@
 import { useEffect, useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ResultsContext } from "../../context/Results";
-import { NUMBER_OF_SECONDS, getRandomInt } from "../../constants/general";
+import { NUMBER_OF_SECONDS, getRandomInt, NUM_QUESTIONS_INTERVENTION } from "../../constants/general";
 import styles from "./styles.module.css";
 
-const num1 = getRandomInt(0, 99);
-const num2 = getRandomInt(0, 99);
+const randomNumbers = Array.from(Array(NUM_QUESTIONS_INTERVENTION * 2).keys()).map((_, i) => getRandomInt(10, 99));
+let results = [];
+
+for (let i = 0; i < randomNumbers.length; i = i + 2) {
+  results.push([randomNumbers[i], randomNumbers[i + 1]]);
+}
 const Intervention = () => {
   const navigate = useNavigate();
   const { setCurrentTest } = useContext(ResultsContext);
   const [sum, setSum] = useState("");
+  const [currentSum, setCurrentSum] = useState({});
   useEffect(() => {
     setTimeout(() => {
       navigate("/");
@@ -18,11 +23,20 @@ const Intervention = () => {
   }, []);
   return (
     <div className={styles.container}>
-      <h1>Find the sum of below numbers</h1>
-      <h2 className={styles.sum}>
-        {`${num1} + ${num2}`} =
-        <input value={sum} onChange={(e) => setSum(e.target.value)} className={styles.inputStyles} />
-      </h2>
+      <h2>Find the difference of below numbers</h2>
+      <div className={styles.questions}>
+        {results.map((eachPair, _index) => (
+          <h2 className={styles.sum} key={_index}>
+            {`${eachPair[0]} - ${eachPair[1]}`} =
+            <input
+              value={currentSum._index}
+              type="number"
+              onChange={(e) => setCurrentSum((prev) => ({ ...prev, [_index]: e.target.value }))}
+              className={styles.inputStyles}
+            />
+          </h2>
+        ))}
+      </div>
     </div>
   );
 };

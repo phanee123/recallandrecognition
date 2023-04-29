@@ -1,9 +1,56 @@
 .main-container {
   background-color: white;
   width: 93vw;
-  min-height: 90vh;
+  min-height: 93vh;
   border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.evaluateWrapper {
+  display: flex;
+  gap: 20rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  display: block;
+  outline: 0;
+  border: 0;
+  padding: 8px 32px;
+  background-color: #6666ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .evaluateWrapper {
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 426px) {
+  .evaluateWrapper {
+    gap: 2rem;
+    flex-direction: column;
+  }
+  .inputWrapper {
+    gap: 1rem;
+  }
+  .button {
+    padding: 8px;
+    font-size: 12px;
+  }
 }

@@ -8,7 +8,6 @@ const Instructions = () => {
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { currentTest } = useContext(ResultsContext);
-  console.log({ currentTest });
   const CURRENT_INSTRUCTIONS = [INSTRUCTION_STEPS_TEST1, INSTRUCTION_STEPS_TEST2][currentTest];
   const { stepIndex, buttonLabel1 = "", content, buttonLabel2 = "" } = CURRENT_INSTRUCTIONS[currentStep];
 

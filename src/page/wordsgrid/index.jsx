@@ -3,10 +3,12 @@ import { ResultsContext } from "../../context/Results";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import { NUMBER_OF_SECONDS } from "../../constants/general";
+import sound from "../../assets/click.wav";
 const WordsGrid = () => {
   const { systemInput, currentTest, setUserInput } = useContext(ResultsContext);
   const [userClicked, setUserClicked] = useState([]);
   const navigate = useNavigate();
+  const clickAudio = new Audio(sound);
   useEffect(() => {
     setTimeout(() => {
       if (currentTest) {
@@ -17,6 +19,7 @@ const WordsGrid = () => {
   }, []);
 
   const handleWordClick = (event) => {
+    clickAudio.play();
     const temp = [...userClicked];
     const value = event.target.innerHTML;
     temp.push(value);
@@ -25,7 +28,7 @@ const WordsGrid = () => {
 
   const handleSubmit = () => {
     setUserInput(userClicked);
-    navigate("/exitWithExcel");
+    navigate("/evaluate");
   };
 
   if (currentTest) {
@@ -33,9 +36,14 @@ const WordsGrid = () => {
       <div className={styles.container}>
         <div className={styles.wordWrapper}>
           {systemInput.map((word, index) => (
-            <h3 className={styles.wordStylesClickable} onClick={handleWordClick}>
+            <button
+              className={styles.wordButton}
+              onClick={handleWordClick}
+              key={word}
+              disabled={userClicked.includes(word)}
+            >
               {word}
-            </h3>
+            </button>
           ))}
         </div>
         <button onClick={handleSubmit} className={styles.submitButton}>
@@ -47,7 +55,9 @@ const WordsGrid = () => {
   return (
     <div className={styles.wordWrapper}>
       {systemInput.map((word, index) => (
-        <h3 className={styles.wordStyles}>{word}</h3>
+        <h3 key={word} className={styles.wordStyles}>
+          {word}
+        </h3>
       ))}
     </div>
   );

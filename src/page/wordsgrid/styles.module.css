@@ -8,8 +8,8 @@
 
 .wordWrapper {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem 4rem;
 }
 
 .wordStyles {
@@ -18,11 +18,13 @@
   font-size: 24px;
 }
 
-.wordStylesClickable {
-  padding: 8px 16px;
-  text-align: center;
-  font-size: 24px;
+.wordButton {
+  border: none;
+  outline: none;
+  background-color: #fff;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .submitButton {
@@ -49,11 +51,8 @@
     text-align: center;
     font-size: 16px;
   }
-  .wordStylesClickable {
-    padding: 8px;
-    text-align: center;
-    font-size: 14px;
-    cursor: pointer;
+  .wordButton {
+    font-size: 16px;
   }
 }
 

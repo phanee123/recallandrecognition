@@ -6,7 +6,7 @@ const TEST1_WORDS = [
   "Comb",
   "Battery",
   "Clock",
-  "Cotton",
+  "Plant",
   "Payment",
   "Pencil",
   "Doctor",
@@ -24,7 +24,7 @@ const TEST2_WORDS = [
   "Comb",
   "Battery",
   "Clock",
-  "Cotton",
+  "Plant",
   "Payment",
   "Pencil",
   "Doctor",
@@ -64,5 +64,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
-const NUMBER_OF_SECONDS = 10;
-export { TEST1_WORDS, TEST2_WORDS, shuffleArray, NUMBER_OF_SECONDS, getRandomInt };
+// #TODO:
+const NUMBER_OF_SECONDS = 1;
+const NUM_QUESTIONS_INTERVENTION = 15;
+export { TEST1_WORDS, TEST2_WORDS, shuffleArray, NUMBER_OF_SECONDS, getRandomInt, NUM_QUESTIONS_INTERVENTION };
