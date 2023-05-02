@@ -3,7 +3,7 @@ import { ResultsContext } from "../context/Results";
 import { useNavigate } from "react-router-dom";
 import { TEST1_WORDS, TEST2_WORDS, shuffleArray } from "../constants/general";
 
-import readyAudio from "../assets/ready.mp3";
+import readyAudio from "../assets/readysound.mp3";
 
 const Ready = () => {
   const navigate = useNavigate();
