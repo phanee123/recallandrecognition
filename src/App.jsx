@@ -8,6 +8,7 @@ import Ready from "./page/Ready";
 import WordsGrid from "./page/wordsgrid";
 import Intervention from "./page/intervention";
 import Evaluate from "./page/Evaluate";
+import LastPage from "./page/LastPage";
 
 import "./App.css";
 
@@ -23,6 +24,7 @@ function App() {
             <Route path="/wordsgrid" element={<WordsGrid />} />
             <Route path="/evaluate" element={<Evaluate />} />
             <Route path="/exitWithExcel" element={<ExitWithDownloadExcel />} />
+            <Route path="/lastactivity" element={<LastPage />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </ResultsProvider>
