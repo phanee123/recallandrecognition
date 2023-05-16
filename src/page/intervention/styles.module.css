@@ -2,9 +2,12 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .sum {
   text-align: center;
@@ -20,6 +23,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem 4rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -29,5 +37,13 @@
   }
   .questions {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+  .questions {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

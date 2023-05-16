@@ -66,12 +66,15 @@ const ExitWithDownloadExcel = () => {
   return (
     <div style={styles.wrapper}>
       <h2>Results:</h2>
-      <h3>Score Test 1 :{test1Score}</h3>
-      <h3>Score Test 2 :{getTest2Score()}</h3>
-      <h3>Please click the below link to download the results</h3>
+      <h3>No. of words recalled :{test1Score}</h3>
+      <h3>No. of words recognized :{getTest2Score()}</h3>
+      <h3>
+        Please click the below link to download the key and your responses for
+        recognition
+      </h3>
       <CSVLink {...csvReport}>Download me</CSVLink>
       <button style={styles.button} onClick={() => navigate("/lastactivity")}>
-        End
+        Next
       </button>
     </div>
   );

@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 32px;
+  gap: 15px;
 }
 .buttonContainer {
   width: 100%;
@@ -31,6 +31,21 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+.buttonAudio {
+  outline: 0;
+  border: 0;
+  padding: 8px 32px;
+  background-color: #ffff;
+  color: #000;
+  outline: 1px solid #000;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  width: 7rem;
+}
+
 .buttonBack {
   display: block;
   outline: 0;
@@ -50,4 +65,18 @@
 }
 .button:hover {
   background-color: #4d4dff;
+}
+
+@media (max-width: 426px) {
+  .card {
+    width: 90vw;
+  }
+  .buttonContainer {
+    flex-direction: column;
+    /* justify-content: stretch;
+    align-items: center; */
+  }
+  .buttonContainer > * {
+    width: 100%;
+  }
 }
