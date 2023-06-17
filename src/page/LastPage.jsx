@@ -36,11 +36,6 @@ const heading = {
 const LastPage = () => {
   return (
     <div style={heading.heading}>
-      <h4>
-        You will have to present your results as per the table given and discuss
-        the results. conclusions and practical application should also be
-        written in your record book as per the format given below.
-      </h4>
       <div style={lastPageStyles.container}>
         <p>
           Table-1:Showing results for number of words recalled and recognized by
@@ -70,7 +65,8 @@ const LastPage = () => {
         <div style={lastPageStyles.bottomArea}>
           <h4>Discussion:</h4>
           <p style={heading.underline}>
-            Discuss weather recall or recognition is better.
+            Discuss weather recall is better that recognition or vice-versa for
+            words.
           </p>
           <h4>Conclusion:</h4>
           <p style={heading.underline}>

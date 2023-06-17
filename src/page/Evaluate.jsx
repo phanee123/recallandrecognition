@@ -14,17 +14,20 @@ const Evaluate = () => {
 
   return (
     <div className="evaluateWrapper">
-      <h4>
+      <h4 className="heading">
         The following is the original list of words which was presented to you
-        during the experiment. Using this as a key, Compare the list with the
-        words that you have written in your note book.
+        during the experiment.
       </h4>
-      <div>
-        <ul>
+      <h4>
+        Using this as a key, Compare the list with the words that you have
+        written in your note book.
+      </h4>
+      <div className="wordWrapper">
+        <ol>
           {TEST1_WORDS.map((word) => (
             <li key={word}>{word}</li>
           ))}
-        </ul>
+        </ol>
         <div className="inputWrapper">
           <label htmlFor="test1UserScore">
             <h5>

@@ -29,11 +29,8 @@ const Intervention = () => {
   }, []);
   return (
     <div className={styles.container}>
-      <h2>Find the difference of below numbers</h2>
-      <h3>
-        Please calculate the results as quickly, accurately and as many as
-        possible
-      </h3>
+      <h2>Find the answers for the maths problems given below</h2>
+      <h3>Please solve them as quickly as possible</h3>
       <div className={styles.questions}>
         {results.map((eachPair, _index) => (
           <h2 className={styles.sum} key={_index}>
