@@ -24,12 +24,13 @@
   outline: 0;
   border: 0;
   padding: 8px 32px;
-  background-color: #6666ff;
-  color: white;
   border-radius: 6px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
+
+  background-color: #6666ff;
+  color: white;
 }
 
 .buttonAudio {
@@ -51,13 +52,14 @@
   outline: 0;
   border: 0;
   padding: 8px 32px;
-  background-color: #ffff;
-  color: #6666ff;
-  outline: 1px solid #6666ff;
   border-radius: 6px;
   cursor: pointer;
   font-size: 20px;
   font-weight: 600;
+
+  background-color: #ffff;
+  color: #6666ff;
+  outline: 1px solid #6666ff;
 }
 
 .buttonBack:hover {
@@ -71,8 +73,14 @@
   .card {
     width: 90vw;
   }
+  .button,
+  .buttonBack {
+    font-size: 16px;
+    font-weight: 600;
+  }
   .buttonContainer {
     flex-direction: column;
+    width: 60%;
     /* justify-content: stretch;
     align-items: center; */
   }

@@ -15,26 +15,19 @@ const Evaluate = () => {
   return (
     <div className="evaluateWrapper">
       <h4 className="heading">
-        The following is the original list of words which was presented to you
-        during the experiment.
+        The following is the original list of words which was presented to you during the experiment.
       </h4>
-      <h4>
-        Using this as a key, Compare the list with the words that you have
-        written in your note book.
-      </h4>
+      <h4>Using this as a key, Compare the list with the words that you have written in your note book.</h4>
       <div className="wordWrapper">
-        <ol>
+        <ol style={{ margin: "16px 0" }}>
           {TEST1_WORDS.map((word) => (
             <li key={word}>{word}</li>
           ))}
         </ol>
         <div className="inputWrapper">
-          <label htmlFor="test1UserScore">
-            <h5>
-              No. of correct words recalled need to be presented in the space
-              given below.
-            </h5>
-            Recall Score{" "}
+          <h5>No. of correct words recalled need to be presented in the space given below.</h5>
+          <label htmlFor="test1UserScore" style={{ textAlign: "center" }}>
+            Recall Score
             <input
               type="number"
               value={test1Score}

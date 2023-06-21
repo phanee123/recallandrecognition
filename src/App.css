@@ -22,13 +22,17 @@
 
 .inputWrapper {
   display: flex;
-  gap: 4rem;
+  gap: 1rem;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .wordWrapper {
-  gap: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
@@ -48,6 +52,7 @@
 @media (max-width: 768px) {
   .evaluateWrapper {
     gap: 10rem;
+    margin: 1rem;
   }
 }
 
